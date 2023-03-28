@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root {
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+  --White: hsl(0, 0%, 100%);
+  --Very-light-grayish-blue: hsl(210, 60%, 98%);
+  --Light-grayish-blue-1: hsl(211, 68%, 94%);
+  --Light-grayish-blue-2: hsl(205, 33%, 90%);
+  --Grayish-blue: hsl(219, 14%, 63%);
+  --Dark-grayish-blue: hsl(219, 12%, 42%);  
+  --Very-dark-blue: hsl(224, 21%, 14%); 
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  cursor: pointer;
+}
+
+img:hover {
+  opacity: .8;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: var(--Very-light-grayish-blue);
+  color: var(--Very-dark-blue);
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.notifications-container {
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--White);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.notification-headings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7rem;
+}
+
+
+.notification-headings div:last-child:hover, .clubs:hover, .notification-content h3:hover{
+  cursor: pointer;
+  color: var(--Blue);
+}
+
+.notification-title {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+
+.notification-title button {
+  background-color: var(--Blue);
+  color: var(--White);
+  padding: .5rem .7rem;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+.notifications {
+  font-size: .9rem;
+  padding: 1.5rem;
+}
+
+
+.notification {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  background-color: hsl(211, 68%, 94%, 0.5);
+  padding: .7rem;
+  border-radius: 8px;
+}
+
+.message {
+  margin-top: 1rem;
+  padding: 1rem;
+  color: var(--Dark-grayish-blue);
+  background-color: var(--Light-grayish-blue-1);
+  border-radius: 8px;
+}
+
+
+
+
+.notification img {
+  min-width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+ h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.info {
+  font-size: 1rem;
+  color: var(--Grayish-blue);
+}
+
+.post-info{
+  font-size: 1rem;
+  color: var(--Dark-grayish-blue);
+  font-weight: 800;
+}
+
+
+.post-info::after {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background-color: var(--Red);
+  border-radius: 50%;
+  margin-left: 3px;
+  margin-left: 10px;
+}
+
+.clubs {
+  margin-left: .3rem;
+  font-size: 1rem;
+}
+
+.is-old::after {
+  display: none;
+}
+
+
+ .notification-date {
+  font-size: 1rem;
+  color: var(--Grayish-blue);
+}
+
+.notification-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification-content div:last-child img {
+  border-radius: 8px;
+  position: relative;
+  top: 15px;
+}
+
+@media all and (max-width: 400px)
+{
+  body {
+    font-size: .5rem;
+  }
+
+  h3,.info,.post-info,.notification-date,.clubs {
+    font-size: .8rem;
+  }
+
+  .notification-headings {
+    gap: 2rem;
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
